@@ -22,7 +22,7 @@ void test_coco_person() {
     const int num_thread = 1;
     const float score_thresh = 0.5;
 
-    TNNDevice device_id = TNNGPU;//运行设备
+    TNNDevice device_id = TNNCPU;//运行设备
     ModelParam model_param = COCO_PERSON_PARAM;//模型参数
     KeyPointDetector *detector = new KeyPointDetector(model_path,
                                                       model_param,
