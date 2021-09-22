@@ -7,10 +7,10 @@
 - 支持OpenCL模型推理加速，在普通手机可实时检测
 - 该仓库并未集成`人体检测模型`，Pose检测输入是原图，使用人体检测框并进行裁剪，Pose检测效果会更好
 - 关于轻量化版本的人体检测检测模型，可参考[Object-Detection-Lite-cpp](https://github.com/PanJinquan/Object-Detection-Lite-cpp)
-- 仅用于学习交流，并未进行过多的性能优化
-- 博客《[2D Pose人体关键点检测(Python/Android /C++ Demo)](https://panjinquan.blog.csdn.net/article/details/115765863) 》
+- 纯C++版本速度比较慢，需要配置OpenCL方可实时检测
 - [Python Demo](https://github.com/PanJinquan/Human-Keypoints-Detection)  模型训练代码暂时未提供
 - [Android Demo](https://download.csdn.net/download/guyuealian/24186395) 已经集成了轻量化版本的`人体检测模型`和`人体姿态估计模型`，在普通手机可实时检测
+- 博客《[2D Pose人体关键点检测(Python/Android /C++ Demo)](https://panjinquan.blog.csdn.net/article/details/115765863) 》
 
 |[Android Demo](https://download.csdn.net/download/guyuealian/24186395) CPU:70ms,GPU:50ms|
 |---|
@@ -48,7 +48,7 @@ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
 sudo make install
 ```
 
-- 配置OpenCL（可选）
+- 配置OpenCL加速（可选）
 > Android系统一般都支持OpenCL，Linux系统可参考如下配置：
 
 ```bash
